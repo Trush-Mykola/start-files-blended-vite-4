@@ -1,9 +1,9 @@
 import { FiSearch } from 'react-icons/fi';
 
 import style from './Form.module.css';
-import { nanoid } from '@reduxjs/toolkit';
+// import { nanoid } from '@reduxjs/toolkit';
 import { useDispatch } from 'react-redux';
-import { addTodo } from 'reduxTodo/todosSlice';
+import { addTodo } from 'reduxTodo/todoOps';
 
 export const Form = () => {
   const dispatch = useDispatch();
@@ -16,7 +16,7 @@ export const Form = () => {
     }
     const todoObj = {
       text: todo,
-      id: nanoid(),
+      // id: nanoid(),
     };
     dispatch(addTodo(todoObj));
     event.target.reset();
